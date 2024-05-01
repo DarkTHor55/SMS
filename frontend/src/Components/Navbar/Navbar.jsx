@@ -7,7 +7,7 @@ export const Navbar = ()=>{
                 <div className="font-semibold uppercase text-5xl">SMS</div>
             </div>
             <div className="links flex gap-10">
-                {["Services", "Our Work","About us","Insights","contact"].map((item,index)=>(
+                {["Home", "About Us","Blogs","Events","contact"].map((item,index)=>(
                     <a key={index} className={`text-md capitalize font-semibold $(index===4 && "ml-32")`}>{item}</a>
                 ))}
             </div>
