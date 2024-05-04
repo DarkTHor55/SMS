@@ -1,25 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full px-20 py-8 flex justify-between items-center  top-0 left-0  bg-white shadow-lg p-4">
-       <div className='logo'>
-          <div className='font-semibold uppercase text-5xl'>SWS</div>
-       </div>
-       <div className="links flex gap-10" style={{ 
-           '@media screen and (max-width: 768px)': {
-             gap: '5px', /* Adjust as needed */
-           }
-         }}>
-            <Link className='text-md capitalize font-semibold' to={"/"}>Home</Link>
-            <Link className='text-md capitalize font-semibold' to={"/about"}>About us</Link>
-            <Link className='text-md capitalize font-semibold' to={"/blogs"}>Blogs</Link>
-            <Link className='text-md capitalize font-semibold' to={"/events"}>Events</Link>
-            <Link className='text-md capitalize font-semibold' to={"/contact"}>Contact</Link>
-       </div>
+    <div className="fixed top-0 left-0 w-full h-[80px] z-10 bg-white shadow-md flex justify-around items-center px-6">
+      <div className="logo">
+        <div className="font-medium  text-3xl text-blue-500">SWS</div>
+      </div>
+      <div className="links flex gap-6">
+        <Link className="text-md text-gray-700 font-medium text-base hover:text-blue-700 transition duration-300" to={"/"}>Home</Link>
+        <Link className="text-md text-gray-700 font-medium text-base hover:text-blue-700 transition duration-300" to={"/about"}>About us</Link>
+        <Link className="text-md text-gray-700 font-medium text-base hover:text-blue-700 transition duration-300" to={"/blogs"}>Blogs</Link>
+        <Link className="text-md text-gray-700 font-medium text-base hover:text-blue-700 transition duration-300" to={"/events"}>Events</Link>
+        <Link className="text-md text-gray-700 font-medium text-base hover:text-blue-700 transition duration-300" to={"/contact"}>Contact</Link>
+      </div>
     </div>
-  )
+  );
 }
+
+// ont-family: "Lexend Deca", Sans-serif;
+//     font-size: 16px;
+//     font-weight: 500
 
 export default Navbar;
