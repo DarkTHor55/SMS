@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-[80px] z-10 bg-white shadow-md flex justify-around items-center px-6">
+    <div className="fixed top-0 left-0 w-full h-[80px] z-50 bg-white shadow-md flex justify-around items-center px-6">
       <div className="logo">
         <div className="font-medium  text-3xl text-blue-500">SWS</div>
       </div>
@@ -20,8 +20,14 @@ const Navbar = () => {
   );
 }
 
-// ont-family: "Lexend Deca", Sans-serif;
-//     font-size: 16px;
-//     font-weight: 500
+
+// const navbar= ()=>{
+//   return (
+//     <div className=''>
+
+//     </div>
+//   )
+// }
+
 
 export default Navbar;

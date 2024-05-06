@@ -1,80 +1,162 @@
-import React, { useState } from 'react';
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
-// import Navbar from './Navbar';
+import React from 'react'
+import './home.css'
+
+import bubble1 from '../assets/bubble3.png'
+import bubble2 from '../assets/bubble.png'
+import bubble3 from '../assets/bubble1.png'
+import Img from '../assets/img.png'
+import Crousel from './pages/Crousel'
+
+
 
 const Hero = () => {
-  const slides = [
-    {
-      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
   return (
-  
-    <div className='flex justify-center items-center h-screen py-20'>
-     {/* <Navbar/> */}
-      <div className='max-w-[1200px] h-[700px] w-full m-auto py-16 px-4 relative group'>
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-        ></div>
-        {/* Left Arrow */}
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
-        </div>
-        {/* Right Arrow */}
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
-        </div>
-        <div className='flex top-4 justify-center py-2'>
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className='text-2xl cursor-pointer'
-            >
-              <RxDotFilled />
+    <div className=' pt-16'>
+      <div className='Container  flex flex-col items-center'>
+      <div className='bg-gradient-to-b from-red-500 via-orange-300 to-amber-200 relative flex  justify-center w-full h-screen '>
+               <div className='top-24 homecard relative flex w-3/4 rounded-xl bg-cover'
+               style={{backgroundImage:`url(${Img})`,backgroundPosition:`center`}}>
+
+              <div className='homedata'>
+                       <div className='heading text-4xl font-medium  tracking-wide font-serif w-80'>Samarpit<br></br>
+                       Media <br></br>
+                       Society
+                       </div><br></br> 
+                       
+                       <div className='w-80 italic'>Samarpit Media Society (SMS) has been working in Uttarakhand since 2012
+                       </div><div className='w-80 italic'>Samarpit Media Society (SMS) has been working in Uttarakhand since 2012
+                       </div>
+                       <br></br>
+                       <button className='btn-pin'>Join Us</button>
             </div>
-          ))}
+            
+       </div> 
+</div>
+            {/* <=======About us======> */}
+        
+
+
+         <div className='relative flex  justify-center w-full h-screen bg-gradient-to-b from-amber-200 via-sky-300 to-blue-200'>
+          <div className='h-4/5 w-11/12 top-20 rounded-xl bg-white relative'>
+          <div className='absolute top-24 bg-gray-500 rounded-xl w-2/5 h-4/6 left-2/4 z-30 shadow '>
+          <Crousel/>
+          </div>
+          <div className='absolute h-20  w-auto text-center text-8xl font-serif  -top-12 left-20'>
+            About Us
+          </div>
+          <div className='absolute top-24 left-20 bg-gray-400 w-2/5 z-10 h-4/6 bg-transparent text-center'>
+          hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjshsjghdsaghdhsgdsadhgs<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsadedffasdfsadsasadfsg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjssdsadsadasda<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghssdsadsadsadsadasdadg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhsadsadsadasdsadjsa<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsasadasdsadasdsadasdg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjsadsadasdsadsa<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsadsadasdsadasdsadg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjshsjghdsaghdhsgdsadhgs<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsadedffasdfsadsasadfsg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjssdsadsadasda<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghssdsadsadsadsadasdadg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhsadsadsadasdsadjsa<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsasadasdsadasdsadasdg<br></br>
+            hsjghdsaghdhsgdsadhgsdghhsagdhsagdhjsadsadasdsadsa<br></br>
+            djsgdjsaghdj,adghhj,sdggsadgsahdghsadsadasdsadasdsadg<br></br>
+          </div>
+          <div className='absolute w-44 rounded-full top-1/3  left-36'>
+              <img src={bubble2} className='rounded-full w-full animate-bounce '></img>
+             </div>
+             <div className='absolute  w-28 bg-transparent rounded-full   animate-bounce top-2/4 left-80'>
+              <img src={bubble3} className='rounded-full w-full '></img>
+             </div>
+            
+             <div className='absolute  w-32 rounded-full  animate-bounce left-72 top-36'>
+             <img src={bubble1}  className='rounded-full  w-full'></img>
+             </div>
+             <button className='absolute bottom-6 h-14 w-40  text-center text-3xl
+             left-64 font-serif rounded-xl btn-pin2'>Know More</button>
+             </div>
+            </div> 
+          </div>
+        
+
+
+
+
+
+
+       
+         <div className='relative flex  justify-center w-full h-fit bg-gradient-to-b from-blue-200 via-cyan-300 to-purple-400'>
+          <div className='h-fit w-11/12 flex justify-center top-20 rounded-xl bg-white '>
+           <div className='homecard2 w-full rounded-xl h-fit z-40'> 
+           <div className='absolute h-20  w-auto text-center text-8xl font-serif  -top-12 right-32'>Projects</div>
+           <div className='mt-56 grid grid-rows-3 grid-cols-2  gap-y-24 px-24 '>
+            <div className='h-80 z-10 px-9'><Crousel/></div>
+            <div  className='second text-center yoga z-10 px-9 '>2
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            kldjkljdlkjlwjlkwjqdjddjld
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            
+            
+            <div className='text-5xl slide-left'>yoga se hoga</div></div> 
+            
+            <div className='h-80 text-center defence third z-10 px-9'>3
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            kldjkljdlkjlwjlkwjqdjddjldj
+            jdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            kldjkljdlkjlwjlkwjqdjddjld
+            <div className='text-5xl slide-right1'>selfdefence lodey pe</div>
+            </div> 
+            <div className='h-80 z-10 px-9'><Crousel/></div> 
+            <div className='h-80 z-10 px-9'>5<Crousel/></div> 
+            <div className='second  text-center h-80 z-10 px-9 dance'>0
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            kldjkljdlkjlwjlkwjqdjddjld
+            jjdjjdjdwjdjwdjwdjwjdj
+            dlidjlk;djljdlwjjl;kqjd
+            ddlkjhlkdjl;kjdkjld;kjwl;
+            hdgkhsgfjghshfgdhdjgfdgjhgf
+            wldjdjkljddfdsfdsfdsfdffd
+            kldjkljdlkjlwjlkwjqdjddjld
+            <div className='text-5xl slide-left'>nacbaliye</div>
+            </div>
+           </div>
+           <div className='w-full mt-20 mb-10 flex justify-center'> <button className='
+           h-14 w-40  text-center text-3xl font-serif rounded-xl  btn-pin3'>Know More</button></div>
+         
+           </div>
+          </div>
+        
+</div>
         </div>
-      </div>
-    </div>
-  );
-};
+     
+   
+  )
+}
 
+export default Hero
 
-export default Hero;
 
 
 
