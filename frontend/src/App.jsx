@@ -16,7 +16,7 @@ function App() {
     <>
          <Navbar/>
      <Routes> 
-        {/* <Route path='/' element={<Suspense fallback={"loading"}><Hero/></Suspense>}/> */}
+        <Route path='/' element={<Suspense fallback={"loading"}><Hero/></Suspense>}/>
         <Route path='/about' element={<Suspense fallback={"loading"}><About/></Suspense>}/>
         <Route path='/contact' element={<Suspense fallback={"loading"}><Contact/></Suspense>}/>
         <Route path='/home' element={<Suspense fallback={"loading"}><Home/></Suspense>}/>
